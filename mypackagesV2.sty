@@ -1,0 +1,22 @@
+\ProvidesPackage{mypackagesv2}
+\usepackage{graphicx} % Insert images
+\usepackage{amsmath} % Math styles
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{nicefrac, xfrac} % diagonal fractions
+\usepackage{multicol}
+\usepackage[tmargin=0.9in,bmargin=0.9in,lmargin=0.75in,rmargin=0.75in]{geometry}.
+\usepackage{hyperref}
+\usepackage[thinc]{esdiff} % better derivatives!
+\usepackage{nicefrac}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\everymath{\displaystyle} % Large math font
+% For circled enumerates
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\setcounter{secnumdepth}{0} % remove title numbering
+\renewcommand{\rmdefault}{lmss}
