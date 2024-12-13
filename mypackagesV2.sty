@@ -2,21 +2,33 @@
 \usepackage{graphicx} % Insert images
 \usepackage{amsmath} % Math styles
 \usepackage{amsfonts}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{cmbright}
+\usepackage[OT1]{fontenc}
 \usepackage{nicefrac, xfrac} % diagonal fractions
-\usepackage{multicol}
-\usepackage[tmargin=0.9in,bmargin=0.9in,lmargin=0.75in,rmargin=0.75in]{geometry}.
 \usepackage{hyperref}
 \usepackage[thinc]{esdiff} % better derivatives!
 \usepackage{nicefrac}
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\usepackage[center]{titlesec}
+\usepackage{float} % intuitive figure placement using H option
+\usepackage{stanli} % for structural analysis
+\usepackage{caption} % reformat how captions are shown
+\usepackage{hyperref} % hyperlinked references
+\usepackage{cleveref} % write out the word before reference
+
+% crf is for mid-sentence reference. Crf is beginning of sentence reference. Only keeping cref for now 
+\crefname{table}{Table}{tables}
+\crefname{figure}{Figure}{figures}
+\crefname{equation}{Equation}{equations}
+
+\titlespacing{\section}{0pt}{4pt}{4pt}
+\titlespacing{\subsection}{0pt}{4pt}{4pt}
+\titleformat*{\section}{\centering\fontsize{14}{17}\bfseries}
+\titleformat*{\subsection}{\centering\fontsize{13}{16}\bfseries}
 \everymath{\displaystyle} % Large math font
 % For circled enumerates
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
-\setcounter{secnumdepth}{0} % remove title numbering
-\renewcommand{\rmdefault}{lmss}
+\newcommand\mybar{\kern1pt\rule[-\dp\strutbox]{.8pt}{\baselineskip}\kern1pt}
+
+
